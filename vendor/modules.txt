@@ -1,3 +1,6 @@
+# github.com/Jorropo/generator v0.0.0-20220616120754-5d6e46dcc82c
+## explicit; go 1.18
+github.com/Jorropo/generator
 # github.com/alphadose/itogami v0.0.0-20220615140746-2256de286af9
 ## explicit; go 1.18
 github.com/alphadose/itogami

@@ -1,3 +1,5 @@
+github.com/Jorropo/generator v0.0.0-20220616120754-5d6e46dcc82c h1:hSg0QTZE20zlP6SGtAHbVFsRLPB1YsvC+pGAQvbVU1Q=
+github.com/Jorropo/generator v0.0.0-20220616120754-5d6e46dcc82c/go.mod h1:7SJu0EPhAyeVonijsVuOFpMO0gV8fa52FXe+CT36Epo=
 github.com/alphadose/itogami v0.0.0-20220615140746-2256de286af9 h1:JxYFFzuDpkqFHm2Fxtz0v+f3YEPTNiRPtWLxVHSRxuc=
 github.com/alphadose/itogami v0.0.0-20220615140746-2256de286af9/go.mod h1:QDsatlDSUJB4sXxZsJEpawGnTDwSdvX27ZXqtuZY3WA=
 github.com/gammazero/deque v0.1.0 h1:f9LnNmq66VDeuAlSAapemq/U7hJ2jpIWa4c09q8Dlik=
