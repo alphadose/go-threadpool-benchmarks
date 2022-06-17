@@ -1,7 +1,13 @@
-# github.com/alphadose/itogami v0.0.0-20220615231253-a1b610bb149b
+# github.com/alphadose/itogami v0.0.0-20220617073114-b2b711ec97aa
 ## explicit; go 1.18
 github.com/alphadose/itogami
 github.com/alphadose/itogami/constants
+# github.com/gammazero/deque v0.1.0
+## explicit; go 1.15
+github.com/gammazero/deque
+# github.com/gammazero/workerpool v1.1.2
+## explicit; go 1.15
+github.com/gammazero/workerpool
 # github.com/panjf2000/ants/v2 v2.5.0
 ## explicit; go 1.18
 github.com/panjf2000/ants/v2

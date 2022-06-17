@@ -24,8 +24,8 @@ Pool With Func
 go test -bench=. -benchmem constants.go throughput_test.go
 goos: darwin
 goarch: arm64
-BenchmarkAntsPooWithFunc-8       	       2	 553801375 ns/op	 6429988 B/op	   98143 allocs/op
-BenchmarkItogamiPoolWithFunc-8   	       3	 362104570 ns/op	15861378 B/op	   83403 allocs/op
+BenchmarkAntsPooWithFunc-8       	       2	 579326562 ns/op	 6581620 B/op	  102456 allocs/op
+BenchmarkItogamiPoolWithFunc-8   	       3	 361101097 ns/op	14577853 B/op	   83407 allocs/op
 PASS
 ok  	command-line-arguments	4.334s
 ```
