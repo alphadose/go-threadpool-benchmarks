@@ -1,14 +1,11 @@
-# github.com/alphadose/itogami v0.0.0-20220615140746-2256de286af9
+# github.com/alphadose/itogami v0.0.0-20220615231253-a1b610bb149b
 ## explicit; go 1.18
 github.com/alphadose/itogami
 github.com/alphadose/itogami/constants
-# github.com/gammazero/deque v0.1.0
-## explicit; go 1.15
-github.com/gammazero/deque
-# github.com/gammazero/workerpool v1.1.2
-## explicit; go 1.15
-github.com/gammazero/workerpool
 # github.com/panjf2000/ants/v2 v2.5.0
 ## explicit; go 1.18
 github.com/panjf2000/ants/v2
 github.com/panjf2000/ants/v2/internal
+# golang.org/x/sync v0.0.0-20220601150217-0de741cfad7f
+## explicit
+golang.org/x/sync/errgroup
