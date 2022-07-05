@@ -9,6 +9,7 @@ require (
 )
 
 require (
+	github.com/bytedance/gopkg v0.0.0-20220623074550-9d6d3df70991 // indirect
 	github.com/gammazero/deque v0.1.0 // indirect
 	github.com/gammazero/workerpool v1.1.2 // indirect
 )

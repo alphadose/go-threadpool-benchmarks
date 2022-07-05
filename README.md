@@ -5,22 +5,35 @@ Comparing against:-
 1. Unlimited goroutines
 2. [Ants](https://github.com/panjf2000/ants)
 3. [Gamma-Zero-Worker-Pool](https://github.com/gammazero/workerpool)
-4. golang.org/x/sync/errgroup
+4. [golang.org/x/sync/errgroup](https://pkg.go.dev/golang.org/x/sync/errgroup)
+5. [Bytedance GoPool](https://github.com/bytedance/gopkg/tree/develop/util/gopool)
 
 Normal Pool
 ```bash
 $ go test -bench=. -benchmem constants.go general_test.go
-goos: darwin
-goarch: arm64
-BenchmarkUnlimitedGoroutines-8   	       4	 294670417 ns/op	96600320 B/op	 2004185 allocs/op
-BenchmarkErrGroup-8              	       3	 555517181 ns/op	120093120 B/op	 3000970 allocs/op
-BenchmarkAntsPool-8              	       2	 510125334 ns/op	22748144 B/op	 1101798 allocs/op
-BenchmarkGammaZeroPool-8         	       2	 697477271 ns/op	18863856 B/op	 1048377 allocs/op
+name                   time/op
+UnlimitedGoroutines-8   301ms ± 4%
+ErrGroup-8              515ms ± 9%
+AntsPool-8              582ms ± 9%
+GammaZeroPool-8         740ms ±13%
+BytedanceGoPool-8       572ms ±18%
+ItogamiPool-8           331ms ± 7%
 
-BenchmarkItogamiPool-8           	       4	 317310260 ns/op	25431518 B/op	 1055384 allocs/op
+name                   alloc/op
+UnlimitedGoroutines-8  96.3MB ± 0%
+ErrGroup-8              120MB ± 0%
+AntsPool-8             22.4MB ± 6%
+GammaZeroPool-8        18.8MB ± 1%
+BytedanceGoPool-8      82.2MB ± 2%
+ItogamiPool-8          25.6MB ± 2%
 
-PASS
-ok  	command-line-arguments	10.764s
+name                   allocs/op
+UnlimitedGoroutines-8   2.00M ± 0%
+ErrGroup-8              3.00M ± 0%
+AntsPool-8              1.10M ± 2%
+GammaZeroPool-8         1.05M ± 0%
+BytedanceGoPool-8       2.59M ± 1%
+ItogamiPool-8           1.05M ± 0%
 ```
 
 Pool With Func

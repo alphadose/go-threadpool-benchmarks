@@ -8,6 +8,7 @@ import (
 	"github.com/alphadose/itogami"
 	"github.com/panjf2000/ants/v2"
 
+	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/gammazero/workerpool"
 	"golang.org/x/sync/errgroup"
 )
@@ -104,6 +105,25 @@ func BenchmarkItogamiPool(b *testing.B) {
 		wg.Add(RunTimes)
 		for j := 0; j < RunTimes; j++ {
 			p.Submit(func() {
+				demoFunc()
+				wg.Done()
+			})
+		}
+		wg.Wait()
+	}
+	b.StopTimer()
+}
+
+func BenchmarkBytedanceGoPool(b *testing.B) {
+	var wg sync.WaitGroup
+	p := gopool.NewPool("test", PoolSize, gopool.NewConfig())
+
+	b.ResetTimer()
+	b.StartTimer()
+	for i := 0; i < b.N; i++ {
+		wg.Add(RunTimes)
+		for j := 0; j < RunTimes; j++ {
+			p.Go(func() {
 				demoFunc()
 				wg.Done()
 			})
