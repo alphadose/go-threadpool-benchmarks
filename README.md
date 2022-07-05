@@ -1,4 +1,4 @@
-Benchmarks of itogami vs other go threadpools
+# Benchmarks of itogami vs other go threadpools
 
 Comparing against:-
 
@@ -8,9 +8,11 @@ Comparing against:-
 4. [golang.org/x/sync/errgroup](https://pkg.go.dev/golang.org/x/sync/errgroup)
 5. [Bytedance GoPool](https://github.com/bytedance/gopkg/tree/develop/util/gopool)
 
-Normal Pool
+## Normal Pool
+
+Results computed from [benchstat](https://pkg.go.dev/golang.org/x/perf/cmd/benchstat) of 30 cases each via `go test -bench=. -benchmem constants.go general_test.go`
+
 ```bash
-$ go test -bench=. -benchmem constants.go general_test.go
 name                   time/op
 UnlimitedGoroutines-8   301ms ± 4%
 ErrGroup-8              515ms ± 9%
@@ -36,7 +38,8 @@ BytedanceGoPool-8       2.59M ± 1%
 ItogamiPool-8           1.05M ± 0%
 ```
 
-Pool With Func
+## Pool With Predefined Function
+
 ```bash
 go test -bench=. -benchmem constants.go throughput_test.go
 goos: darwin
